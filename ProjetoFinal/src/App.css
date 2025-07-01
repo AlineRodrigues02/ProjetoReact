@@ -1,42 +1,122 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f6fa;
+  padding: 20px;
+  margin: 0;
+}
+
+.container {
+  max-width: 600px;
+  background-color: #fff;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
   text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.paciente-info {
+  background-color: #ecf0f1;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.paciente-info p {
+  margin: 8px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.form-triagem .campo {
+  margin-bottom: 15px;
 }
 
-.card {
-  padding: 2em;
+.form-triagem label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
 }
 
-.read-the-docs {
-  color: #888;
+.form-triagem input,
+.form-triagem textarea,
+.form-triagem select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.form-triagem textarea {
+  resize: vertical;
+}
+
+.botao-enviar {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.botao-enviar:hover {
+  background-color: #2980b9;
+}
+
+.link-medico {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.link-medico a {
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-medico a:hover {
+  text-decoration: underline;
+}
+.lista-pacientes {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.paciente {
+  background-color: #fff;
+  border-left: 6px solid #ccc;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.paciente strong {
+  font-size: 1.1rem;
+}
+
+.paciente button {
+  margin-top: 0.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.paciente button:hover {
+  background-color: #0056b3;
 }
