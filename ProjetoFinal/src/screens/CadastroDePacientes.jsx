@@ -1,37 +1,66 @@
+import { useState, useContext } from "react";
+import { PacienteContext } from "./LocalStorage";
+import Triagem from "./Triagem";
+
 function CadastroDePacientes() {
+  const{pacientes,SetPacientes} = useContext(PacienteContext)
+  const [nome, setNome] = useState('')
+  const [motivo, setMotivo] = useState('')
+
+  const gerarTriagem = (e) =>{e.preventDefault()
+
+  if(!nome || !motivo) return alert("Preencha os campos! ")
+
+  const novoPaciente ={
+    nome,
+    motivo,
+    triagem: null,
+    atendido: false,
+  }
+
+  SetPacientes([...pacientes,novoPaciente])
+
+  setNome('')
+  setMotivo('')
+
+  }
+
   return (
-    <div class="container">
+    <div className="container">
       <h1>Cadastro de Paciente</h1>
 
-      <form class="form-triagem" onsubmit="gerarTriagem(); return false;">
-        <div class="campo">
-          <label for="nome">Nome do Paciente:</label>
+      <form className="form-triagem" onSubmit={gerarTriagem}>
+        <div className="campo">
+          <label htmlFor="nome">Nome do Paciente:</label>
           <input
             type="text"
             name="nome"
             id="nome"
             placeholder="Digite o nome completo"
+            value={nome} onChange={(e)=> setNome(e.target.value)}
             required
           />
         </div>
 
-        <div class="campo">
-          <label for="motivo">Motivo da Consulta:</label>
+        <div className="campo">
+          <label htmlFor="motivo">Motivo da Consulta:</label>
           <input
             type="text"
             name="motivo"
             id="motivo"
             placeholder="Ex: Dor no peito, febre..."
+            value={motivo}
+            onChange={(e)=> setMotivo(e.target.value)}
             required
           />
         </div>
 
-        <button type="submit" class="botao-enviar">
+        <button type="submit" className="botao-enviar">
           Registrar
         </button>
       </form>
 
-      <div class="link-medico">
+      <div className="link-medico">
         <a href='/triagem' target="_blank">
           👉 Ir para a triagem
         </a>

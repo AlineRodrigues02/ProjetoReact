@@ -1,5 +1,4 @@
 
-
 function Triagem() {
   return (
     <div class="container">
