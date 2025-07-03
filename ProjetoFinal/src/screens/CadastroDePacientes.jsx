@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { PacienteContext } from "./LocalStorage";
 import Triagem from "./Triagem";
+import { Link } from "react-router-dom";
 
 function CadastroDePacientes() {
   const{pacientes,SetPacientes} = useContext(PacienteContext)
@@ -59,12 +60,11 @@ function CadastroDePacientes() {
           Registrar
         </button>
       </form>
-
       <div className="link-medico">
-        <a href='/triagem' target="_blank">
-          👉 Ir para a triagem
-        </a>
-      </div>
+      <Link to="/triagem">
+      👉 Ir para a triagem
+      </Link></div>
+
     </div>
   );
 }
