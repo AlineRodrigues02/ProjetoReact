@@ -1,24 +1,20 @@
-import {createContext, useState, useEffect } from "react";
-export const PacienteContext = createContext()
+import { createContext, useState, useEffect } from "react";
 
-export function PacienteProvider({children}){
-    const[pacientes, SetPacientes] = useState([])
-    //carregar do local storage
-    useEffect(()=>{
-        const dados = localStorage.getItem('pacientes')
-        if(dados){
-            SetPacientes(JSON.parse(dados))
-        }
-    },[])
+export const PacienteContext = createContext();
 
-    //Salvar quando mudar os pacientes
-    useEffect(()=>{
-        localStorage.setItem('pacientes',JSON.stringify(pacientes))
-    },[pacientes])
-    
-    return(
-        <PacienteContext.Provider value={{pacientes, SetPacientes}}>
-            {children}
-        </PacienteContext.Provider>
-    )
-}
+export const PacienteProvider = ({ children }) => {
+  const [pacientes, setPacientes] = useState(() => {
+    const armazenado = localStorage.getItem("pacientes");
+    return armazenado ? JSON.parse(armazenado) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("pacientes", JSON.stringify(pacientes));
+  }, [pacientes]);
+
+  return (
+    <PacienteContext.Provider value={{ pacientes, setPacientes }}>
+      {children}
+    </PacienteContext.Provider>
+  );
+};

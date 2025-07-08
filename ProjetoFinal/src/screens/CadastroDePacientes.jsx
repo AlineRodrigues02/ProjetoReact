@@ -4,7 +4,7 @@ import Triagem from "./Triagem";
 import { Link } from "react-router-dom";
 
 function CadastroDePacientes() {
-  const{pacientes,SetPacientes} = useContext(PacienteContext)
+  const {pacientes,setPacientes} = useContext(PacienteContext)
   const [nome, setNome] = useState('')
   const [motivo, setMotivo] = useState('')
 
@@ -19,7 +19,7 @@ function CadastroDePacientes() {
     atendido: false,
   }
 
-  SetPacientes([...pacientes,novoPaciente])
+  setPacientes([...pacientes,novoPaciente])
 
   setNome('')
   setMotivo('')

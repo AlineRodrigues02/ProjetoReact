@@ -49,7 +49,7 @@ function Triagem() {
         <p><em>Nenhum paciente cadastrado.</em></p>
       )}
 
-      <form className="form-triagem" onSubmit="enviarTriagem(); return false;">
+      <form className="form-triagem" onSubmit={enviarTriagem}>
         <div className="campo">
           <label htmlFor="temperatura">Temperatura (°C):</label>
           <input type="number" 
