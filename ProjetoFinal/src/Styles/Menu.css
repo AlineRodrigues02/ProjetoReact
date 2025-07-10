@@ -1,0 +1,21 @@
+.menu {
+  background-color: #0c2d48;
+  padding: 1rem;
+}
+
+.menu ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  justify-content: center;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}

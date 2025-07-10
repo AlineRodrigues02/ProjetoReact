@@ -4,7 +4,9 @@ import Triagem from "./screens/Triagem";
 import FilaDePacientes from "./screens/FilaDePacientes";
 import FilaDeEspera from "./screens/FilaDeEspera";
 import { PacienteProvider } from "./screens/LocalStorage";
+import Menu from "./screens/Menu";
 import "./App.css";
+import Atendimento from "./screens/Atendimento";
 
 
 function App() {
@@ -12,10 +14,12 @@ function App() {
     <>
     <PacienteProvider>
       <BrowserRouter>
+      <Menu/>
         <Routes>
           <Route path="/" element={<CadastroDePacientes />} />
           <Route path="/triagem" element={<Triagem />} />
           <Route path="/filaDePacientes" element={<FilaDePacientes />} />
+          <Route path="/Atendimento" element={<Atendimento />} />
           <Route path="/filaDeEspera" element={<FilaDeEspera />} />
         </Routes>
       </BrowserRouter>

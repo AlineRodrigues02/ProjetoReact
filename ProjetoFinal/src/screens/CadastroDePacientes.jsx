@@ -8,7 +8,8 @@ function CadastroDePacientes() {
   const [nome, setNome] = useState('')
   const [motivo, setMotivo] = useState('')
 
-  const gerarTriagem = (e) =>{e.preventDefault()
+  const gerarTriagem = (e) =>{
+    e.preventDefault()
 
   if(!nome || !motivo) return alert("Preencha os campos! ")
 

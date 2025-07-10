@@ -1,122 +1,146 @@
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f2f6fa;
-  padding: 20px;
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+  background-color: #f2f7fb;
+  color: #222;
+  min-height: 100vh;
+}
+
+/* Menu */
+.menu {
+  background-color: #0c2d48;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.menu ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  justify-content: center;
+}
+
+.menu a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #8dd7f2;
+}
+
+/* Container principal */
 .container {
-  max-width: 600px;
-  background-color: #fff;
-  margin: auto;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
 }
 
+/* Títulos */
 h1 {
   text-align: center;
-  color: #2c3e50;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
+  color: #0c2d48;
 }
 
-.paciente-info {
-  background-color: #ecf0f1;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 20px;
+/* Formulários */
+.form-triagem {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
-.paciente-info p {
-  margin: 8px 0;
+.campo {
+  display: flex;
+  flex-direction: column;
 }
 
-.form-triagem .campo {
-  margin-bottom: 15px;
+.campo label {
+  margin-bottom: 0.3rem;
+  font-weight: 500;
 }
 
-.form-triagem label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-}
-
-.form-triagem input,
-.form-triagem textarea,
-.form-triagem select {
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  padding: 0.6rem;
+  border-radius: 5px;
   border: 1px solid #ccc;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
-.form-triagem textarea {
-  resize: vertical;
+textarea {
+  resize: none;
 }
 
 .botao-enviar {
-  width: 100%;
-  padding: 12px;
-  background-color: #3498db;
+  background-color: #0c2d48;
   color: white;
-  font-size: 16px;
+  padding: 0.8rem;
   border: none;
-  border-radius: 8px;
+  font-weight: bold;
+  border-radius: 6px;
   cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.3s ease;
+  transition: 0.3s;
 }
 
 .botao-enviar:hover {
-  background-color: #2980b9;
+  background-color: #145d8c;
 }
 
-.link-medico {
+/* Cards de pacientes */
+.paciente-card,
+.painel-card {
+  background-color: #f8f9fa;
+  border-left: 8px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.painel-card.vermelho {
+  border-left-color: #e63946;
+  background-color: #ffe6e6;
+}
+
+.painel-card.amarelo {
+  border-left-color: #ffb703;
+  background-color: #fff9e6;
+}
+
+.painel-card.verde {
+  border-left-color: #2a9d8f;
+  background-color: #e6fff2;
+}
+
+/* Links */
+.link-medico,
+.link-espera {
+  margin-top: 2rem;
   text-align: center;
-  margin-top: 20px;
 }
 
-.link-medico a {
-  color: #2c3e50;
+.link-medico a,
+.link-espera a {
+  color: #0c2d48;
   text-decoration: none;
   font-weight: bold;
 }
 
-.link-medico a:hover {
+.link-medico a:hover,
+.link-espera a:hover {
   text-decoration: underline;
-}
-.lista-pacientes {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.paciente {
-  background-color: #fff;
-  border-left: 6px solid #ccc;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.paciente strong {
-  font-size: 1.1rem;
-}
-
-.paciente button {
-  margin-top: 0.5rem;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.paciente button:hover {
-  background-color: #0056b3;
 }
