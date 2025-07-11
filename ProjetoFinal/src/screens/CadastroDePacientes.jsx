@@ -14,10 +14,12 @@ function CadastroDePacientes() {
   if(!nome || !motivo) return alert("Preencha os campos! ")
 
   const novoPaciente ={
+    id: Date.now(),
     nome,
     motivo,
     triagem: null,
-    atendido: false,
+    emAtendimento: false,
+    atendido: false
   }
 
   setPacientes([...pacientes,novoPaciente])

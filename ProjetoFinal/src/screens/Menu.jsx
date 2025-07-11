@@ -8,8 +8,8 @@ function Menu(){
             <ul>
                 <li><Link to="/">🏥 Cadastro</Link></li>
                 <li><Link to="/Triagem">📝 Triagem</Link></li>
-                <li><Link to="/filaDePacientes">👨‍⚕️ Fila de Pacientes</Link></li>
-                <li><Link to="/filaDeEspera">📺 Painel TV</Link></li>
+                <li><Link to="/FilaDePacientes">👨‍⚕️ Fila de Pacientes</Link></li>
+                <li><Link to="/FilaDeEspera">📺 Painel TV</Link></li>
             </ul>
         </nav>
     )

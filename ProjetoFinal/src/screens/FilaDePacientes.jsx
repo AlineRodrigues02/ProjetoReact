@@ -1,15 +1,15 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { PacienteContext } from './LocalStorage'
-import '../Styles/FilaDePacientes.css'
+import { PacienteContext } from './LocalStorage';
+import '../Styles/FilaDePacientes.css';
 
 function FilaDePacientes() {
-  const { pacientes, setPacientes } = useContext(PacienteContext)
+  const { pacientes, setPacientes } = useContext(PacienteContext);
 
-  const pacientesTriados = pacientes.filter(p => p.triagem && !p.atendido)
+  const pacientesTriados = pacientes.filter(p => p.triagem && !p.atendido);
 
-  const prioridade = { vermelho: 1, amarelo: 2, verde: 3 }
-  pacientesTriados.sort((a, b) => prioridade[a.triagem.risco] - prioridade[b.triagem.risco])
+  const prioridade = { vermelho: 1, amarelo: 2, verde: 3 };
+  pacientesTriados.sort((a, b) => prioridade[a.triagem.risco] - prioridade[b.triagem.risco]);
 
   const atenderPaciente = (index) => {
     const pacienteTriado = pacientesTriados[index];
@@ -22,24 +22,23 @@ function FilaDePacientes() {
 
     if (pacienteIndex !== -1) {
       const atualizado = [...pacientes];
-      atualizado[pacienteIndex].atendido = true;
+      atualizado[pacienteIndex].emAtendimento = true;
       setPacientes(atualizado);
     } else {
       alert("Erro: paciente não encontrado!");
     }
   };
 
-
   return (
     <div className="container">
       <h1>Fila de Pacientes</h1>
 
       {pacientesTriados.length === 0 ? (
-        <p>Nenhum paciente aguardando paciente</p>
+        <p>Nenhum paciente aguardando atendimento</p>
       ) : (
         pacientesTriados.map((paciente, index) => (
           <div key={index} className="paciente-card">
-            <p><strong>Nome:</strong>{paciente.nome}</p>
+            <p><strong>Nome:</strong> {paciente.nome}</p>
             <p>
               <strong>Risco:</strong>
               {" "}
@@ -49,23 +48,14 @@ function FilaDePacientes() {
               {" "}
               {paciente.triagem.risco}
             </p>
-            {/* <button onClick={() => atenderPaciente(index)}>
-              Atender
-            </button> */}
 
-            <div style={{ display: 'flex', gap: '10px' }}>
-              <button onClick={() => atenderPaciente(index)}>
-                Atender
-              </button>
-
-              <Link
-                to="/atendimento"
-                state={{ paciente, index }}
-              >
+            {!paciente.emAtendimento ? (
+              <button onClick={() => atenderPaciente(index)}>Atender</button>
+            ) : (
+              <Link to="/atendimento" state={{ paciente, index }}>
                 <button>Detalhes do Atendimento</button>
               </Link>
-            </div>
-            
+            )}
             <hr />
           </div>
         ))
@@ -73,9 +63,7 @@ function FilaDePacientes() {
 
       <div id="filaPacientes" className="lista-pacientes">
         <div className="link-espera">
-          <a href="/filaDeEspera">
-            👉 Ir para a fila de espera
-          </a>
+          <a href="/filaDeEspera">👉 Ir para a fila de espera</a>
         </div>
       </div>
     </div>

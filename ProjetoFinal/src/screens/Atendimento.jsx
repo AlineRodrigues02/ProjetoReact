@@ -7,22 +7,29 @@ function Atendimento() {
     const navigate = useNavigate()
     const { pacientes, setPacientes } = useContext(PacienteContext)
 
-    const { paciente, index } = location.state || {}
+    const { paciente } = location.state || {}
 
+     if (!paciente) return <p>Nenhum paciente está sendo atendido</p>
     const [diagnostico, setDiagnostico] = useState(paciente?.diagnostico || "")
 
-    if (!paciente) return <p>Nenhum paciente está sendo atendido</p>
+    const finalizarAtendimento= () =>{
+        const atualizados = [...pacientes]
+        const index = pacientes.findIndex(p =>
+            p.id === paciente.id)
 
-    const salvarAtendimento = () => {
-        const atualizado = [...pacientes]
-        atualizado[index] = {
-            ...paciente,
-            diagnostico,
-            atendido: true,
+        if (index !== -1){
+            atualizados[index] = {
+                ...atualizados[index],
+                atendido: true,
+                diagnostico,
+            }
+            setPacientes(atualizados)
+            alert("Atendimento finalizado!")
+            navigate("/FilaDePacientes")
+        }else{
+            alert("Paciente não encontrado")
         }
-        setPacientes(atualizado)
-        alert("Diagnóstico salvo")
-        navigate("/filaDePacientes")
+
     }
 
     
@@ -42,7 +49,7 @@ return (
             <textarea rows="4" value={diagnostico} onChange={(e)=> setDiagnostico(e.target.value)}/>
         </div>
 
-        <button onClick={salvarAtendimento}>Finalizar atendimento</button>
+        <button onClick={finalizarAtendimento}>Finalizar atendimento</button>
 
 
     </div>

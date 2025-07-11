@@ -3,11 +3,14 @@ import { PacienteContext } from "./LocalStorage";
 
 function FilaDeEspera() {
   const {pacientes} = useContext(PacienteContext);
+  
   const getStatus = (p) =>{
-    if (p.atendido) return "✅ Em Atendimento"
+    if (p.atendido) return "✅ Atendimento Finalizado"
+    if (p.emAtendimento) return "✅ Em Atendimento"
     if (p.triagem) return "👨‍⚕️ Aguardando Consulta"
     return "📝 Aguardando Triagem"
   }
+
   return (
     <div className="container">
       <h1>Fila de Espera</h1>
@@ -15,7 +18,7 @@ function FilaDeEspera() {
         {pacientes.length ===0 ?(
           <p>Nenhum paciente cadastrado</p>
         ):(
-          pacientes.map((paciente, index)=>(
+          pacientes.map((paciente, index) => (
             <div key={index} className={`painel-card ${paciente.triagem?.risco || ''}`}>
               <p><strong>Nome:</strong>{paciente.nome}</p>
               <p><strong>Status:</strong>{getStatus(paciente)}</p>
