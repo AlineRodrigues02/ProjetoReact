@@ -10,7 +10,7 @@ function FilaDeEspera() {
     if (p.triagem) return "👨‍⚕️ Aguardando Consulta"
     return "📝 Aguardando Triagem"
   }
-
+  
   return (
     <div className="container">
       <h1>Fila de Espera</h1>
@@ -19,7 +19,8 @@ function FilaDeEspera() {
           <p>Nenhum paciente cadastrado</p>
         ):(
           pacientes.map((paciente, index) => (
-            <div key={index} className={`painel-card ${paciente.triagem?.risco || ''}`}>
+
+            <div key={index} className="painel-card">
               <p><strong>Nome:</strong>{paciente.nome}</p>
               <p><strong>Status:</strong>{getStatus(paciente)}</p>
               </div>

@@ -100,31 +100,26 @@ textarea {
   background-color: #145d8c;
 }
 
-/* Cards de pacientes */
-.paciente-card,
+
+.paciente-card.vermelho {
+  border-left: 6px solid #dc3545; /* vermelho */
+  background-color: #ffe5e5;
+}
+
+.paciente-card.amarelo {
+  border-left: 6px solid #ffc107; /* amarelo */
+  background-color: #fffbe6;
+}
+
+.paciente-card.verde {
+  border-left: 6px solid #28a745; /* verde */
+  background-color: #e6ffee;
+}
 .painel-card {
-  background-color: #f8f9fa;
-  border-left: 8px solid #ccc;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 6px;
-  transition: 0.3s ease;
+  border-left: 6px solid #28a745; 
+  background-color: #e6ffee;
 }
 
-.painel-card.vermelho {
-  border-left-color: #e63946;
-  background-color: #ffe6e6;
-}
-
-.painel-card.amarelo {
-  border-left-color: #ffb703;
-  background-color: #fff9e6;
-}
-
-.painel-card.verde {
-  border-left-color: #2a9d8f;
-  background-color: #e6fff2;
-}
 
 /* Links */
 .link-medico,

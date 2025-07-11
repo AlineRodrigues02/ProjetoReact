@@ -37,7 +37,7 @@ function FilaDePacientes() {
         <p>Nenhum paciente aguardando atendimento</p>
       ) : (
         pacientesTriados.map((paciente, index) => (
-          <div key={index} className="paciente-card">
+          <div key={index}  className={`paciente-card ${paciente.triagem.risco}`}>
             <p><strong>Nome:</strong> {paciente.nome}</p>
             <p>
               <strong>Risco:</strong>
