@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { PacienteContext } from "./LocalStorage";
-
+import "../Styles/FiladeEspera.css"
 function FilaDeEspera() {
   const {pacientes} = useContext(PacienteContext);
   
