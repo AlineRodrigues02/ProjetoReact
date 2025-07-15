@@ -61,11 +61,7 @@ function FilaDePacientes() {
         ))
       )}
 
-      <div id="filaPacientes" className="lista-pacientes">
-        <div className="link-espera">
-          <a href="/filaDeEspera">👉 Ir para a fila de espera</a>
-        </div>
-      </div>
+     
     </div>
   );
 }

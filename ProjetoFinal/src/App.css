@@ -45,32 +45,3 @@ input, select, textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-
-.link-medico a {
-  color: #0077b6;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.link-medico a:hover {
-  text-decoration: underline;
-}
-
-Links 
-.link-medico,
-.link-espera {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.link-medico a,
-.link-espera a {
-  color: #0c2d48;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.link-medico a:hover,
-.link-espera a:hover {
-  text-decoration: underline;
-} 

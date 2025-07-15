@@ -94,9 +94,7 @@ function Triagem() {
         <button type="submit" className="botao-enviar">Enviar ao médico</button>
       </form>
 
-      <div className="link-medico">
-        <a href="/filaDePacientes">👉 Ir para a tela do médico</a>
-      </div>
+     
     </div>
   );
 }

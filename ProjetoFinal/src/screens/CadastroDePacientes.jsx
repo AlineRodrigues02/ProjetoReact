@@ -64,10 +64,7 @@ function CadastroDePacientes() {
           Registrar
         </button>
       </form>
-      <div className="link-medico">
-      <Link to="/triagem">
-      👉 Ir para a triagem
-      </Link></div>
+    
 
     </div>
   );
