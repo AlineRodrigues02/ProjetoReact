@@ -35,3 +35,13 @@
 .filaDeEspera {
   margin-top: 3rem;
 } 
+
+
+@media (max-width:600px){
+  .painel-card{
+    padding: 1rem;
+  }
+  .painel-card p{
+    font-size: 1rem;
+  }
+}

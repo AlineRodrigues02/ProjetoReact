@@ -19,3 +19,15 @@
 .menu a:hover {
   text-decoration: underline;
 }
+
+@media(max-width:600px){
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu a {
+    font-size: 1rem;
+  }
+
+}
