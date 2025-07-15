@@ -14,6 +14,15 @@ function Triagem() {
   const [observacao, setObservacao] = useState('');
   const [risco, setRisco] = useState('');
 
+
+  const riscoClass = () => {
+      if (risco === "verde") return "risco-verde";
+      if (risco === "amarelo") return "risco-amarelo";
+      if (risco === "vermelho") return "risco-vermelho";
+      return "";
+    }
+
+
   const enviarTriagem = (e) => {
     e.preventDefault();
 
@@ -21,6 +30,8 @@ function Triagem() {
       alert("Nenhum paciente disponível para triagem.");
       return;
     }
+
+
 
     const novaTriagem = {
       temperatura,
@@ -45,16 +56,21 @@ function Triagem() {
     setRisco('');
 
     alert("Triagem realizada com sucesso!");
+
+    
+
   };
 
   return (
-    <div className="container">
+    <div className={`container ${riscoClass()}`}>
       <h1>Triagem de Pacientes</h1>
 
       {pacienteParaTriagem ? (
-        <div className="paciente-info">
+        <div className={`paciente-info ${risco}`}>
+        {/* <div className="paciente-info"> */}
           <p><strong>Paciente:</strong> {pacienteParaTriagem.nome}</p>
           <p><strong>Motivo:</strong> {pacienteParaTriagem.motivo}</p>
+        {/* </div> */}
         </div>
       ) : (
         <p><em>Nenhum paciente aguardando triagem.</em></p>
@@ -80,6 +96,10 @@ function Triagem() {
           <label htmlFor="observacao">Observações:</label>
           <textarea id="observacao" rows="4" value={observacao} onChange={(e) => setObservacao(e.target.value)}></textarea>
         </div>
+
+        {/* <select name="" id="risco"
+        value={risco}
+        onChange={(e)=> setRisco(e.target.value)} required> */}
 
         <div className="campo">
           <label htmlFor="risco">Classificação de Risco:</label>

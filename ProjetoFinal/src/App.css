@@ -47,6 +47,7 @@ input, select, textarea {
   border-radius: 4px;
 }
 
+/* responsividade */
 
 @media (max-width: 768px){
   .container{

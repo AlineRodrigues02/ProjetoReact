@@ -40,6 +40,8 @@
   border-color: #e74c3c;
 }
 
+/* responsividade */
+
 @media(max-width: 600px){
   .paciente-card{
     padding: 0.8rem;

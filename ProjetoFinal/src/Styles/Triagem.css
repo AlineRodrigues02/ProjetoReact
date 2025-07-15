@@ -3,8 +3,57 @@
   padding: 15px;
   margin-bottom: 20px;
   border-radius: 6px;
+  
+}.container {
+  width: 100px;
+  padding: 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
+.risco-verde {
+  background-color: #e6f4ea;
+  border: 2px solid #2ecc71;
+}
+
+.risco-amarelo {
+  background-color: #fff8e1;
+  border: 2px solid #f1c40f;
+}
+
+.risco-vermelho {
+  background-color: #fdecea;
+  border: 2px solid #e74c3c;
+}
+
+/* Motivo e nome da pessoa transitam a cor  */
+.paciente-info {
+  transition: background-color 0.4s ease;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.paciente-info.verde {
+  background-color: rgba(46, 204, 113, 0.1);
+  border-color: rgba(46, 204, 113, 0.3);
+  color: #071e11;
+}
+
+.paciente-info.amarelo {
+  background-color: rgba(241, 196, 15, 0.1);
+  border-color: rgba(241, 196, 15, 0.3);
+  color: #1a1102;
+}
+
+.paciente-info.vermelho {
+  background-color: rgba(231, 76, 60, 0.1);
+  border-color: rgba(231, 76, 60, 0.3);
+  color: #230804;
+}
+
+/* responsividade */
 @media (max-width: 600px){
   .paciente-info{
     font-size: 0.95rem;
