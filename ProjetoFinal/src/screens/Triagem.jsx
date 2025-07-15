@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
 import { PacienteContext } from "./LocalStorage";
+import "../Styles/Triagem.css"
 
 function Triagem() {
   const { pacientes, setPacientes } = useContext(PacienteContext);

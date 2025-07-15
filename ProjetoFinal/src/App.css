@@ -6,122 +6,57 @@
 }
 
 body {
-  background-color: #f2f7fb;
-  color: #222;
-  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-/* Menu */
-.menu {
-  background-color: #0c2d48;
-  padding: 1rem 2rem;
-  margin-bottom: 2rem;
-}
-
-.menu ul {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  justify-content: center;
-}
-
-.menu a {
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: 0.3s;
-}
-
-.menu a:hover {
-  color: #8dd7f2;
-}
-
-/* Container principal */
 .container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  background-color: white;
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
 }
 
-/* Títulos */
-h1 {
+h1, h2 {
   text-align: center;
-  margin-bottom: 2rem;
-  color: #0c2d48;
+  color: #005f73;
 }
 
-/* Formulários */
-.form-triagem {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-.campo {
-  display: flex;
-  flex-direction: column;
-}
-
-.campo label {
-  margin-bottom: 0.3rem;
-  font-weight: 500;
-}
-
-input[type="text"],
-input[type="number"],
-select,
-textarea {
-  padding: 0.6rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-
-textarea {
-  resize: none;
-}
-
-.botao-enviar {
-  background-color: #0c2d48;
+button {
+  background-color: #0077b6;
   color: white;
-  padding: 0.8rem;
   border: none;
-  font-weight: bold;
+  padding: 10px 18px;
   border-radius: 6px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background 0.3s;
 }
 
-.botao-enviar:hover {
-  background-color: #145d8c;
+button:hover {
+  background-color: #023e8a;
 }
 
-
-.paciente-card.vermelho {
-  border-left: 6px solid #dc3545; /* vermelho */
-  background-color: #ffe5e5;
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.paciente-card.amarelo {
-  border-left: 6px solid #ffc107; /* amarelo */
-  background-color: #fffbe6;
+.link-medico a {
+  color: #0077b6;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.paciente-card.verde {
-  border-left: 6px solid #28a745; /* verde */
-  background-color: #e6ffee;
-}
-.painel-card {
-  border-left: 6px solid #28a745; 
-  background-color: #e6ffee;
+.link-medico a:hover {
+  text-decoration: underline;
 }
 
-
-/* Links */
+Links 
 .link-medico,
 .link-espera {
   margin-top: 2rem;
@@ -138,4 +73,4 @@ textarea {
 .link-medico a:hover,
 .link-espera a:hover {
   text-decoration: underline;
-}
+} 

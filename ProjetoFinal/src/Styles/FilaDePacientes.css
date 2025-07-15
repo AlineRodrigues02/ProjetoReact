@@ -29,3 +29,13 @@
 .paciente-card button:hover {
   background-color: #145ea8;
 }
+
+.paciente-card.verde {
+  border-color: #2ecc71;
+}
+.paciente-card.amarelo {
+  border-color: #f1c40f;
+}
+.paciente-card.vermelho {
+  border-color: #e74c3c;
+}

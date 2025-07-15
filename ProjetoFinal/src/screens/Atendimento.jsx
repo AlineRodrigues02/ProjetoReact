@@ -1,6 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { PacienteContext } from "./LocalStorage";
+import "../Styles/Atendimento.css"
 
 function Atendimento() {
     const location = useLocation()

@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { PacienteContext } from "./LocalStorage";
 import Triagem from "./Triagem";
 import { Link } from "react-router-dom";
+import "../Styles/CadastroDePaciente.css"
 
 function CadastroDePacientes() {
   const {pacientes,setPacientes} = useContext(PacienteContext)
