@@ -4,7 +4,30 @@
   margin-bottom: 2rem;
 }
 
+/* TV layout */
+.tv-layout{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; /*espaçamento entre os container*/
+  align-items: flex-start;
+  padding-left: 0.5rem;
+}
+/* Imagem */
+.painel-imagem img{
+
+  max-width: 500px;
+  height: 450px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.painel-lista{
+  flex: 1;
+}
+
 .painel {
+  
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
