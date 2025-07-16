@@ -4,6 +4,8 @@
   margin-bottom: 2rem;
 }
 
+
+
 /* TV layout */
 .tv-layout{
   display: flex;
@@ -12,6 +14,7 @@
   align-items: flex-start;
   padding-left: 0.5rem;
 }
+
 /* Imagem */
 .painel-imagem img{
 
@@ -60,6 +63,16 @@
   margin-top: 3rem;
 } 
 
+/* Hora */
+.hora-atual{
+  text-align: center;
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+
 /* responsividade */
 
 
@@ -69,5 +82,16 @@
   }
   .painel-card p{
     font-size: 1rem;
+  }
+
+}
+@media (max-width: 768px) {
+  .painel-tv {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagem-explicativa {
+    width: 90%;        
   }
 }
