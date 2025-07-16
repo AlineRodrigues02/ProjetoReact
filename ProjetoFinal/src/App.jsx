@@ -15,6 +15,9 @@ function App() {
     <PacienteProvider>
       <BrowserRouter>
       <Menu/>
+       <div className="App-logo">
+                <img src="../public/logo.png" alt="logo" />
+            </div>
         <Routes>
           <Route path="/" element={<CadastroDePacientes />} />
           <Route path="/triagem" element={<Triagem />} />

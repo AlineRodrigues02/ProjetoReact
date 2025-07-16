@@ -47,6 +47,23 @@ input, select, textarea {
   border-radius: 4px;
 }
 
+
+/* Logo */
+.App-logo{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.App-logo img{
+  height: 120px;        
+  width: auto;        
+  object-fit: contain; 
+  border-radius: 0px;  
+  padding: 0;
+  margin: 0;         
+  max-width: 120px; 
+}
+
 /* responsividade */
 
 @media (max-width: 768px){
