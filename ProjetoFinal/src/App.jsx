@@ -16,7 +16,7 @@ function App() {
       <BrowserRouter>
       <Menu/>
        <div className="App-logo">
-                <img src="../public/logo.png" alt="logo" />
+                <img src="/logo.png" alt="logo" />
             </div>
         <Routes>
           <Route path="/" element={<CadastroDePacientes />} />
