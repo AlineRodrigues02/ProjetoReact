@@ -23,3 +23,6 @@ Este projeto é um sistema simples de gerenciamento de atendimentos hospitalares
 - **LocalStorage** – Persistência dos dados
 - **CSS** – Estilização customizada
 ---
+##  Equipe
+- Aline Rodrigues
+- Luis Felipe Andrade
